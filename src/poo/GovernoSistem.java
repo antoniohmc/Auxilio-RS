@@ -9,7 +9,7 @@ public class GovernoSistem {
     Cliente cliente = new Cliente();
     List<Cliente> listaDeClientes = new ArrayList<>();
 
-    public Cliente cadastrarCliente(Scanner scanner) {
+    public void cadastrarCliente(Scanner scanner) {
         System.out.println("Informe seu nome: ");
         String nome = scanner.nextLine();
 
@@ -28,6 +28,6 @@ public class GovernoSistem {
         int telefone = scanner.nextInt();
         scanner.nextLine();
 
-        return new Cliente(nome,email,new Endereco(estado,cidade,bairro),telefone);
+        listaDeClientes.add(new Cliente(nome,email, new Endereco(estado,cidade,bairro), telefone));
     }
 }
