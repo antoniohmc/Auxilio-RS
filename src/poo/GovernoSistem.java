@@ -17,7 +17,7 @@ public class GovernoSistem {
         String email = scanner.nextLine();
 
         System.out.println("Digite seu endereco: ");
-        System.out.println("informe o estado: ");
+        System.out.println("informe o estado: (RS, SP, RJ...)");
         String estado = scanner.nextLine();
         System.out.println("Informe a cidade: ");
         String cidade = scanner.nextLine();
@@ -28,6 +28,26 @@ public class GovernoSistem {
         int telefone = scanner.nextInt();
         scanner.nextLine();
 
-        listaDeClientes.add(new Cliente(nome,email, new Endereco(estado,cidade,bairro), telefone));
+        listaDeClientes.add(new Cliente(nome, email, new Endereco(estado, cidade, bairro), telefone));
+    }
+
+    public List<Cliente> listarClientes() {
+        return listaDeClientes;
+    }
+
+    public void validarAuxilio(Cliente cliente) {
+        if (verificarEndereco(cliente) == true) {
+            System.out.println("Boas noticias! Você tem direito ao auxilio, fique atento ao email.");
+        } else
+            System.out.println("Infelizmente o auxilio não esta disponivel na sua região.");
+    }
+
+    public boolean verificarEndereco(Cliente cliente) {
+        if (cliente.getEndereco().getEstado().equals("RS") &&
+            (cliente.getEndereco().getCidade().equals("Porto Alegre") ||
+                cliente.getEndereco().getCidade().equals("Canoas"))) {
+            return true;
+        } else
+            return false;
     }
 }
