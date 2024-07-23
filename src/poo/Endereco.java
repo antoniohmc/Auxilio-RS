@@ -1,5 +1,8 @@
 package poo;
 
+/**
+ * Classe responsavel por armazenar os valores de um endereço.
+ */
 public class Endereco {
 
     private String estado;

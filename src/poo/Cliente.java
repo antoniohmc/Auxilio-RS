@@ -1,5 +1,7 @@
 package poo;
-
+/**
+Classe responsavel por armazenar os valores de um cliente.
+ */
 public class Cliente {
 
     private String nome;
@@ -7,6 +9,19 @@ public class Cliente {
     private Endereco endereco;
     private int telefone;
 
+    /**
+   Construtor default.
+     */
+    public Cliente() {
+    }
+
+    /**
+     * Construtor inicializado com os parametros:
+     * @String nome
+     * @String email
+     * @Endereco endereco
+     * @int telefone
+     */
     public Cliente(String nome, String email, Endereco endereco, int telefone) {
         this.nome = nome;
         this.email = email;
@@ -14,6 +29,9 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    /**
+     * Métodos getters e setters.
+     */
     public String getNome() {
         return nome;
     }
