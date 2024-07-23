@@ -29,15 +29,19 @@ public class GovernoSistem {
         scanner.nextLine();
 
         listaDeClientes.add(new Cliente(nome, email, new Endereco(estado, cidade, bairro), telefone));
+        System.out.println("Cadastro realizado com sucesso!");
     }
 
-    public List<Cliente> listarClientes() {
-        return listaDeClientes;
+    public void listarClientes() {
+        System.out.println(listaDeClientes.toString());
     }
 
-    public void validarAuxilio(Cliente cliente) {
-        if (verificarEndereco(cliente) == true) {
-            System.out.println("Boas noticias! Você tem direito ao auxilio, fique atento ao email.");
+    public void validarAuxilio() {
+        System.out.println("Informe seu email: ");
+
+
+        if (verificarEndereco(cliente)) {
+            System.out.println("Boas noticias! Você tem direito ao auxilio, fique atento ao seu email.");
         } else
             System.out.println("Infelizmente o auxilio não esta disponivel na sua região.");
     }
