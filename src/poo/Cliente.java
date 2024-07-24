@@ -7,7 +7,7 @@ public class Cliente {
     private String nome;
     private String email;
     private Endereco endereco;
-    private int telefone;
+    private String telefone;
 
     /**
    Construtor default.
@@ -22,7 +22,7 @@ public class Cliente {
      * @Endereco endereco
      * @int telefone
      */
-    public Cliente(String nome, String email, Endereco endereco, int telefone) {
+    public Cliente(String nome, String email, Endereco endereco, String telefone) {
         this.nome = nome;
         this.email = email;
         this.endereco = endereco;
@@ -56,21 +56,19 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
+        return "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", endereco='" + endereco + '\'' +
-                ", telefone=" + telefone +
-                '}';
+                ", telefone=" + telefone;
     }
 }
