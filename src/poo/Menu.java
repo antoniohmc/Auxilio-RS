@@ -37,7 +37,7 @@ public class Menu {
                     break;
 
                 case 3:
-                    governoSistem.validarAuxilio();
+                    governoSistem.validarAuxilio(scanner);
                     break;
 
                 default:
